@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Feb 15 16:57:46 2021
+# Process ID: 149685
+# Current directory: /homes/abaghdad/fatima/sobel
+# Command line: vivado
+# Log file: /homes/abaghdad/fatima/sobel/vivado.log
+# Journal file: /homes/abaghdad/fatima/sobel/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /homes/abaghdad/fatima/sobel/sobel.xpr
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {/homes/abaghdad/fatima/sobel/sources/tb_automate.vhd /homes/abaghdad/fatima/sobel/sources/tb_operativeUnit.vhd /homes/abaghdad/fatima/sobel/sources/tb_gradientUnit.vhd /homes/abaghdad/fatima/sobel/sources/tb_adrgenUnit.vhd}
+update_compile_order -fileset sim_1
+add_files -norecurse /homes/abaghdad/fatima/sobel/sources/dancing_spider.txt
+close_project
+open_project /homes/abaghdad/fatima/sobel/sobel.xpr
+update_compile_order -fileset sources_1
+close_project
