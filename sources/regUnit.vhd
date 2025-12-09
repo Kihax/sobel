@@ -28,8 +28,8 @@ signal S_Pix31, S_Pix32, S_Pix33 : STD_LOGIC_VECTOR (7 downto 0);
 
 begin
 
-	-- banc de registres
-	process(_BLANK_)
+	-- on suit les changements des signaux reset et clk (équivalent à une interruption)
+	process(reset, clk)
 	begin
 	if(reset = '1') then
 		S_Pix11 <= (others => '0');
@@ -43,7 +43,30 @@ begin
 		S_Pix33 <= (others => '0');		
 	elsif(rising_edge(clk)) then
 	
-		_BLANK_
+		-- On procede au decalage des registres
+		if(I_shReg = '1')	then
+			-- 3eme registre
+			S_Pix13 <= S_Pix12;
+			S_Pix23 <= S_Pix22;
+			S_Pix33 <= S_Pix32;
+			-- 2eme registre
+			S_Pix12 <= S_Pix11;
+			S_Pix22 <= S_Pix21;
+			S_Pix32 <= S_Pix31;
+		end if;
+
+		-- On procede au chargement de chaques pixels
+		if(I_ldPix11 = '1') then
+			S_Pix11 <= I_pixel;
+		end if;
+
+		if(I_ldPix21 = '1') then
+			S_Pix21 <= I_pixel;
+		end if;
+
+		if(I_ldPix31 = '1') then
+			S_Pix31 <= I_pixel;
+		end if;
 		
 	end if;
 	end process;
