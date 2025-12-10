@@ -17,12 +17,24 @@ end pixedgeReg;
 architecture Behavioral of pixedgeReg is
 
 -- déclaration des signaux internes
-	_BLANK_
+signal S_Sobel : STD_LOGIC;
 
 begin
 
 	
-	_BLANK_
+	process(clk, reset)
+	begin 
+	
+	if(reset = '1') then
+	   S_Sobel <= '0';
+	elsif(rising_edge(clk)) then
+	   if(I_ldPixEdge = '1') then
+           S_Sobel <= I_pixEdge;
+        end if; 
+	end if;
+	end process;
+	
+	O_pixEdge <= S_Sobel;
 		
 
 end Behavioral;

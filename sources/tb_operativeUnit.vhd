@@ -50,7 +50,7 @@ begin
     if s_reset = '1' then
 	  S_pixel <= (others => '0');
     elsif (rising_edge(S_clk)) then
-	  S_pixel <= STD_LOGIC_VECTOR(unsigned(S_pixel) + 1);
+	  S_pixel <= STD_LOGIC_VECTOR(unsigned(S_pixel) + 50);
     end if;
   end process;
   

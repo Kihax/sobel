@@ -1,0 +1,14 @@
+0.7
+2020.2
+May 22 2024
+18:54:44
+/homes/k24kerla/Documents/SEH/p/sobel/sobel.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
+/homes/k24kerla/Documents/SEH/p/sobel/sources/automate.vhd,1765360113,vhdl,/homes/k24kerla/Documents/SEH/p/sobel/sources/tb_automate.vhd,,,automate,,,,,,,,
+/homes/k24kerla/Documents/SEH/p/sobel/sources/gradientUnit.vhd,1765351811,vhdl,/homes/k24kerla/Documents/SEH/p/sobel/sources/operativeUnit.vhd,,,gradientunit,,,,,,,,
+/homes/k24kerla/Documents/SEH/p/sobel/sources/operativeUnit.vhd,1765350314,vhdl,/homes/k24kerla/Documents/SEH/p/sobel/sources/tb_operativeUnit.vhd,,,operativeunit,,,,,,,,
+/homes/k24kerla/Documents/SEH/p/sobel/sources/pixedgeReg.vhd,1765353121,vhdl,/homes/k24kerla/Documents/SEH/p/sobel/sources/operativeUnit.vhd,,,pixedgereg,,,,,,,,
+/homes/k24kerla/Documents/SEH/p/sobel/sources/regUnit.vhd,1765350314,vhdl,/homes/k24kerla/Documents/SEH/p/sobel/sources/operativeUnit.vhd,,,regunit,,,,,,,,
+/homes/k24kerla/Documents/SEH/p/sobel/sources/tb_automate.vhd,1765350314,vhdl,,,,tb_automate,,,,,,,,
+/homes/k24kerla/Documents/SEH/p/sobel/sources/tb_gradientUnit.vhd,1765350314,vhdl,,,,tb_gradientunit,,,,,,,,
+/homes/k24kerla/Documents/SEH/p/sobel/sources/tb_operativeUnit.vhd,1765355142,vhdl,,,,tb_operativeunit,,,,,,,,
+/homes/k24kerla/Documents/SEH/p/sobel/sources/tb_regUnit.vhd,1765350314,vhdl,,,,tb_regunit,,,,,,,,
