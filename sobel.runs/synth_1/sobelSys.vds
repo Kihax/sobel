@@ -1,0 +1,400 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Dec 16 09:14:54 2025
+# Process ID: 24331
+# Current directory: /homes/k24kerla/Documents/SEH/p/sobel/sobel.runs/synth_1
+# Command line: vivado -log sobelSys.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sobelSys.tcl
+# Log file: /homes/k24kerla/Documents/SEH/p/sobel/sobel.runs/synth_1/sobelSys.vds
+# Journal file: /homes/k24kerla/Documents/SEH/p/sobel/sobel.runs/synth_1/vivado.jou
+# Running On        :fl-tp-br-520
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04.3 LTS
+# Processor Detail  :Intel(R) Core(TM) i5-10500 CPU @ 3.10GHz
+# CPU Frequency     :4337.231 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :16533 MB
+# Swap memory       :4294 MB
+# Total Virtual     :20828 MB
+# Available Virtual :15476 MB
+#-----------------------------------------------------------
+source sobelSys.tcl -notrace
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1680.582 ; gain = 325.840 ; free physical = 6325 ; free virtual = 14198
+Command: synth_design -top sobelSys -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Device 21-9227] Part: xc7a100tcsg324-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24468
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2467.992 ; gain = 420.441 ; free physical = 5235 ; free virtual = 13108
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'sobelSys' [/homes/k24kerla/Documents/SEH/p/sobel/sources/sobelSys.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'sobelProc' [/homes/k24kerla/Documents/SEH/p/sobel/sources/sobelProc.vhd:25]
+INFO: [Synth 8-638] synthesizing module 'operativeUnit' [/homes/k24kerla/Documents/SEH/p/sobel/sources/operativeUnit.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'regUnit' [/homes/k24kerla/Documents/SEH/p/sobel/sources/regUnit.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'regUnit' (0#1) [/homes/k24kerla/Documents/SEH/p/sobel/sources/regUnit.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'gradientUnit' [/homes/k24kerla/Documents/SEH/p/sobel/sources/gradientUnit.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'gradientUnit' (0#1) [/homes/k24kerla/Documents/SEH/p/sobel/sources/gradientUnit.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'pixedgeReg' [/homes/k24kerla/Documents/SEH/p/sobel/sources/pixedgeReg.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'pixedgeReg' (0#1) [/homes/k24kerla/Documents/SEH/p/sobel/sources/pixedgeReg.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'operativeUnit' (0#1) [/homes/k24kerla/Documents/SEH/p/sobel/sources/operativeUnit.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'adrgenUnit' [/homes/k24kerla/Documents/SEH/p/sobel/sources/adrgenUnit.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'adrgenUnit' (0#1) [/homes/k24kerla/Documents/SEH/p/sobel/sources/adrgenUnit.vhd:23]
+INFO: [Synth 8-638] synthesizing module 'automate' [/homes/k24kerla/Documents/SEH/p/sobel/sources/automate.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'automate' (0#1) [/homes/k24kerla/Documents/SEH/p/sobel/sources/automate.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'sobelProc' (0#1) [/homes/k24kerla/Documents/SEH/p/sobel/sources/sobelProc.vhd:25]
+INFO: [Synth 8-3491] module 'vga_nexys4_2regions' declared at '/homes/k24kerla/Documents/SEH/p/sobel/sources/vga_nexys4_2regions.vhd:69' bound to instance 'vga_inst1' of component 'vga_nexys4_2regions' [/homes/k24kerla/Documents/SEH/p/sobel/sources/sobelSys.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'vga_nexys4_2regions' [/homes/k24kerla/Documents/SEH/p/sobel/sources/vga_nexys4_2regions.vhd:93]
+INFO: [Synth 8-3491] module 'clk_wiz_vga_25MHz' declared at '/homes/k24kerla/Documents/SEH/p/sobel/sobel.runs/synth_1/.Xil/Vivado-24331-fl-tp-br-520/realtime/clk_wiz_vga_25MHz_stub.vhdl:6' bound to instance 'Inst_clk_wiz_vga_25MHz' of component 'clk_wiz_vga_25MHz' [/homes/k24kerla/Documents/SEH/p/sobel/sources/vga_nexys4_2regions.vhd:290]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_vga_25MHz' [/homes/k24kerla/Documents/SEH/p/sobel/sobel.runs/synth_1/.Xil/Vivado-24331-fl-tp-br-520/realtime/clk_wiz_vga_25MHz_stub.vhdl:15]
+INFO: [Synth 8-256] done synthesizing module 'vga_nexys4_2regions' (0#1) [/homes/k24kerla/Documents/SEH/p/sobel/sources/vga_nexys4_2regions.vhd:93]
+	Parameter G_MemoryWidth bound to: 8 - type: integer 
+	Parameter G_MemoryDepth bound to: 10000 - type: integer 
+	Parameter G_AddressWidth bound to: 14 - type: integer 
+	Parameter G_InitFileName bound to: dancing_spider.txt - type: string 
+INFO: [Synth 8-3491] module 'SinglePortROMFileInitGeneric' declared at '/homes/k24kerla/Documents/SEH/p/sobel/sources/SinglePortROMFileInitGeneric.vhd:10' bound to instance 'rom_in' of component 'SinglePortROMFileInitGeneric' [/homes/k24kerla/Documents/SEH/p/sobel/sources/sobelSys.vhd:179]
+INFO: [Synth 8-638] synthesizing module 'SinglePortROMFileInitGeneric' [/homes/k24kerla/Documents/SEH/p/sobel/sources/SinglePortROMFileInitGeneric.vhd:25]
+	Parameter G_MemoryWidth bound to: 8 - type: integer 
+	Parameter G_MemoryDepth bound to: 10000 - type: integer 
+	Parameter G_AddressWidth bound to: 14 - type: integer 
+	Parameter G_InitFileName bound to: dancing_spider.txt - type: string 
+INFO: [Synth 8-256] done synthesizing module 'SinglePortROMFileInitGeneric' (0#1) [/homes/k24kerla/Documents/SEH/p/sobel/sources/SinglePortROMFileInitGeneric.vhd:25]
+	Parameter G_MemoryWidth bound to: 8 - type: integer 
+	Parameter G_MemoryDepth bound to: 10000 - type: integer 
+	Parameter G_AddressWidth bound to: 14 - type: integer 
+INFO: [Synth 8-3491] module 'DualPortRamGeneric' declared at '/homes/k24kerla/Documents/SEH/p/sobel/sources/DualPortRamGeneric.vhd:10' bound to instance 'ram_out' of component 'DualPortRamGeneric' [/homes/k24kerla/Documents/SEH/p/sobel/sources/sobelSys.vhd:195]
+INFO: [Synth 8-638] synthesizing module 'DualPortRamGeneric' [/homes/k24kerla/Documents/SEH/p/sobel/sources/DualPortRamGeneric.vhd:29]
+	Parameter G_MemoryWidth bound to: 8 - type: integer 
+	Parameter G_MemoryDepth bound to: 10000 - type: integer 
+	Parameter G_AddressWidth bound to: 14 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'DualPortRamGeneric' (0#1) [/homes/k24kerla/Documents/SEH/p/sobel/sources/DualPortRamGeneric.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'sobelSys' (0#1) [/homes/k24kerla/Documents/SEH/p/sobel/sources/sobelSys.vhd:21]
+WARNING: [Synth 8-7129] Port I_data_M_vga_region1[3] in module vga_nexys4_2regions is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_data_M_vga_region1[2] in module vga_nexys4_2regions is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_data_M_vga_region1[1] in module vga_nexys4_2regions is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_data_M_vga_region1[0] in module vga_nexys4_2regions is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_data_M_vga_region2[3] in module vga_nexys4_2regions is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_data_M_vga_region2[2] in module vga_nexys4_2regions is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_data_M_vga_region2[1] in module vga_nexys4_2regions is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_data_M_vga_region2[0] in module vga_nexys4_2regions is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_Pix22[7] in module gradientUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_Pix22[6] in module gradientUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_Pix22[5] in module gradientUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_Pix22[4] in module gradientUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_Pix22[3] in module gradientUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_Pix22[2] in module gradientUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_Pix22[1] in module gradientUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_Pix22[0] in module gradientUnit is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2566.961 ; gain = 519.410 ; free physical = 5108 ; free virtual = 12982
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2584.773 ; gain = 537.223 ; free physical = 5108 ; free virtual = 12982
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2584.773 ; gain = 537.223 ; free physical = 5108 ; free virtual = 12982
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2584.773 ; gain = 0.000 ; free physical = 5108 ; free virtual = 12981
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/homes/k24kerla/Documents/SEH/p/sobel/sources/ip/clk_wiz_vga_25MHz/clk_wiz_vga_25MHz/clk_wiz_vga_25MHz_in_context.xdc] for cell 'vga_inst1/Inst_clk_wiz_vga_25MHz'
+Finished Parsing XDC File [/homes/k24kerla/Documents/SEH/p/sobel/sources/ip/clk_wiz_vga_25MHz/clk_wiz_vga_25MHz/clk_wiz_vga_25MHz_in_context.xdc] for cell 'vga_inst1/Inst_clk_wiz_vga_25MHz'
+Parsing XDC File [/homes/k24kerla/Documents/SEH/p/sobel/sources/NexysA7_Sobel.xdc]
+WARNING: [Constraints 18-619] A clock with name 'clk_i' already exists, overwriting the previous clock with the same name. [/homes/k24kerla/Documents/SEH/p/sobel/sources/NexysA7_Sobel.xdc:100]
+Finished Parsing XDC File [/homes/k24kerla/Documents/SEH/p/sobel/sources/NexysA7_Sobel.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/homes/k24kerla/Documents/SEH/p/sobel/sources/NexysA7_Sobel.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/sobelSys_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/sobelSys_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2725.523 ; gain = 0.000 ; free physical = 5093 ; free virtual = 12967
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2725.523 ; gain = 0.000 ; free physical = 5093 ; free virtual = 12967
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2725.523 ; gain = 677.973 ; free physical = 5101 ; free virtual = 12976
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2733.527 ; gain = 685.977 ; free physical = 5101 ; free virtual = 12976
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_i. (constraint file  /homes/k24kerla/Documents/SEH/p/sobel/sources/ip/clk_wiz_vga_25MHz/clk_wiz_vga_25MHz/clk_wiz_vga_25MHz_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_i. (constraint file  /homes/k24kerla/Documents/SEH/p/sobel/sources/ip/clk_wiz_vga_25MHz/clk_wiz_vga_25MHz/clk_wiz_vga_25MHz_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for vga_inst1/Inst_clk_wiz_vga_25MHz. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2733.527 ; gain = 685.977 ; free physical = 5101 ; free virtual = 12976
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'automate'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                00000000000000001 |                            00000
+                    init |                00000000000000010 |                            00001
+                    pix1 |                00000000000000100 |                            00010
+                    pix2 |                00000000000001000 |                            00011
+                    pix3 |                00000000000010000 |                            00100
+                     sh1 |                00000000000100000 |                            00101
+                    pix4 |                00000000001000000 |                            00110
+                    pix5 |                00000000010000000 |                            00111
+                    pix6 |                00000000100000000 |                            01000
+                     sh2 |                00000001000000000 |                            01001
+                    pix7 |                00000010000000000 |                            01010
+                    pix8 |                00000100000000000 |                            01011
+                    pix9 |                00001000000000000 |                            01100
+                    exec |                00010000000000000 |                            01101
+                 outedge |                00100000000000000 |                            01110
+                     sh3 |                01000000000000000 |                            01111
+                endsobel |                10000000000000000 |                            10000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'automate'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 2733.527 ; gain = 685.977 ; free physical = 5094 ; free virtual = 12969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   14 Bit       Adders := 4     
+	   7 Input   11 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 3     
+	   2 Input    7 Bit       Adders := 2     
++---Registers : 
+	               14 Bit    Registers := 4     
+	                8 Bit    Registers := 10    
+	                7 Bit    Registers := 2     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 5     
++---RAMs : 
+	              78K Bit	(10000 X 8 bit)          RAMs := 1     
++---ROMs : 
+	                    ROMs := 1     
++---Muxes : 
+	  17 Input   17 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 13    
+	   2 Input   14 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 2     
+	   5 Input    4 Bit        Muxes := 1     
+	  17 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 3     
+	  17 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-6430] The Block RAM "sobelSys/ram_out/RAM_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+WARNING: [Synth 8-7129] Port I_data_M_vga_region1[3] in module vga_nexys4_2regions is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_data_M_vga_region1[2] in module vga_nexys4_2regions is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_data_M_vga_region1[1] in module vga_nexys4_2regions is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_data_M_vga_region1[0] in module vga_nexys4_2regions is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_data_M_vga_region2[3] in module vga_nexys4_2regions is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_data_M_vga_region2[2] in module vga_nexys4_2regions is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_data_M_vga_region2[1] in module vga_nexys4_2regions is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_data_M_vga_region2[0] in module vga_nexys4_2regions is either unconnected or has no load
+RAM Pipeline Warning: Read Address Register Found For RAM ram_out/RAM_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram_out/RAM_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram_out/RAM_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "sobelSys/ram_out/RAM_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM ram_out/RAM_reg. We will not be able to pipeline it. This may degrade performance. 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2733.527 ; gain = 685.977 ; free physical = 5072 ; free virtual = 12953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+-------------------+---------------+----------------+
+|Module Name | RTL Object        | Depth x Width | Implemented As | 
++------------+-------------------+---------------+----------------+
+|sobelSys    | rom_in/O_dout_reg | 16384x8       | Block RAM      | 
++------------+-------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|sobelSys    | ram_out/RAM_reg | 9 K x 8(READ_FIRST)    | W |   | 9 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 4      | 
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'clk_i'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 2733.527 ; gain = 685.977 ; free physical = 5089 ; free virtual = 12977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2733.527 ; gain = 685.977 ; free physical = 5088 ; free virtual = 12976
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|sobelSys    | ram_out/RAM_reg | 9 K x 8(READ_FIRST)    | W |   | 9 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 4      | 
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'ram_out/RAM_reg_3' (RAMB36E1_4) to 'ram_out/RAM_reg_2'
+INFO: [Synth 8-7052] The timing for the instance rom_in/O_dout_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance rom_in/O_dout_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance rom_in/O_dout_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance rom_in/O_dout_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ram_out/RAM_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 2733.527 ; gain = 685.977 ; free physical = 5089 ; free virtual = 12977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2733.527 ; gain = 685.977 ; free physical = 5129 ; free virtual = 12993
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2733.527 ; gain = 685.977 ; free physical = 5129 ; free virtual = 12993
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2733.527 ; gain = 685.977 ; free physical = 5129 ; free virtual = 12994
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2733.527 ; gain = 685.977 ; free physical = 5129 ; free virtual = 12994
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2733.527 ; gain = 685.977 ; free physical = 5133 ; free virtual = 12998
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2733.527 ; gain = 685.977 ; free physical = 5133 ; free virtual = 12998
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------+----------+
+|      |BlackBox name     |Instances |
++------+------------------+----------+
+|1     |clk_wiz_vga_25MHz |         1|
++------+------------------+----------+
+
+Report Cell Usage: 
++------+-----------------------+------+
+|      |Cell                   |Count |
++------+-----------------------+------+
+|1     |clk_wiz_vga_25MHz_bbox |     1|
+|2     |CARRY4                 |    83|
+|3     |LUT1                   |    59|
+|4     |LUT2                   |   244|
+|5     |LUT3                   |    68|
+|6     |LUT4                   |    42|
+|7     |LUT5                   |    37|
+|8     |LUT6                   |    87|
+|9     |RAMB36E1               |     5|
+|14    |FDCE                   |   115|
+|15    |FDPE                   |    17|
+|16    |FDRE                   |    52|
+|17    |IBUF                   |     2|
+|18    |OBUF                   |    14|
++------+-----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2733.527 ; gain = 685.977 ; free physical = 5133 ; free virtual = 12998
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2733.527 ; gain = 545.227 ; free physical = 5134 ; free virtual = 12999
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2733.535 ; gain = 685.977 ; free physical = 5418 ; free virtual = 13283
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2733.535 ; gain = 0.000 ; free physical = 5417 ; free virtual = 13282
+INFO: [Netlist 29-17] Analyzing 88 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2789.555 ; gain = 0.000 ; free physical = 5381 ; free virtual = 13273
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 905a61bf
+INFO: [Common 17-83] Releasing license: Synthesis
+51 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 2789.555 ; gain = 1094.129 ; free physical = 5376 ; free virtual = 13270
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2241.176; main = 1903.854; forked = 388.627
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3782.727; main = 2789.559; forked = 1049.195
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2813.566 ; gain = 0.000 ; free physical = 5376 ; free virtual = 13270
+INFO: [Common 17-1381] The checkpoint '/homes/k24kerla/Documents/SEH/p/sobel/sobel.runs/synth_1/sobelSys.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file sobelSys_utilization_synth.rpt -pb sobelSys_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 16 09:16:11 2025...

@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log adrgenUnit.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source adrgenUnit.tcl
+EAStep vivado -log sobelSys.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sobelSys.tcl

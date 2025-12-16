@@ -53,7 +53,7 @@ end process state_reg;
 
 	
 -- Calcul de l'état suivant et des sorties
-comb_logic: process(clk)
+comb_logic: process(current_state, I_go, I_EndImage, I_NewLine)
 begin
 	-- initialisation de TOUTES les sorties
     O_ldPix11		<= '0';
@@ -92,6 +92,7 @@ begin
 				
 				-- calcul de l'état suivant
 				next_state	<= Pix1;
+
 
 		when Pix1 =>			
 				-- calcul des sorties SPECIFIQUES à l'état
@@ -239,16 +240,17 @@ begin
 		when sh3 => 
 				-- calcul des sorties SPECIFIQUES à l'état
 				if(I_NewLine = '1') then 
-                    O_shReg	<= '0';
-                    next_state	<= Init;
-                    O_inc_PtrCol <= '1';
+                    next_state	<= Pix1;
+                    O_inc_PtrLine <= '1';
                 else 
-                    O_shReg	<= '1';
                     next_state	<= Pix7;
-                    O_inc_PtrCol <= '0';
                 end if;
+                O_shReg	<= '1';
                 O_enM_R		<= '1';
 				O_selPix	<= "00";
+		when EndSobel =>
+		      O_StartDisplay <= '1';
+		      next_state <= EndSobel;
 
 	    when others =>	
 				next_state	<= Idle;
