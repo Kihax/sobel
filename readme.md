@@ -1,8 +1,16 @@
 # Sobel Filter (VHDL)
 
-This project implements a **Sobel edge-detection filter** in **VHDL**, targeting the **Xilinx Artix‑7 XC7A100T‑CSG324** FPGA. The design focuses on hardware implementation and verification through simulation and synthesis.
+This project presents a **hardware implementation of a Sobel edge‑detection filter in VHDL**, targeting the **Xilinx Artix‑7 XC7A100T‑CSG324** FPGA. The goal is to demonstrate how a classic image‑processing algorithm can be efficiently implemented and validated on FPGA hardware.
 
 ![Artix‑7 XC7A100T‑CSG324](images/carte.jpg)
+
+---
+
+## Project Description
+
+The **Sobel filter** is a widely used operator in image processing for **edge detection**. It highlights regions of an image where pixel intensity changes sharply, which usually correspond to object boundaries. By computing intensity gradients in the horizontal and vertical directions, the Sobel filter extracts the main structural features of an image.
+
+This filter is particularly well suited for **FPGA implementation** because it relies on simple arithmetic operations and local pixel neighborhoods, allowing efficient parallelization. Such implementations are commonly used in **computer vision**, **robotics**, **real‑time video processing**, and **embedded systems** where low latency is critical.
 
 ---
 
@@ -17,17 +25,17 @@ This project implements a **Sobel edge-detection filter** in **VHDL**, targeting
 - **Vivado (Xilinx)**  
   Used for synthesis, implementation, and bitstream generation for the Artix‑7 FPGA.
 
-- **GHDL** (open‑source VHDL simulator)  
-  Used to compile and simulate the design.
+- **GHDL**  
+  Open‑source VHDL simulator used to compile and simulate the design.
 
-- **Surfer** (waveform viewer)  
-  Used to visualize and analyze simulation signals.
+- **Surfer**  
+  Waveform viewer used to analyze simulation results.
 
 ---
 
 ## Simulation & Testbench
 
-The design can be fully validated using the provided testbenches before FPGA deployment.
+The design is first validated using VHDL testbenches before being deployed on the FPGA.
 
 ### Compilation
 
@@ -45,7 +53,7 @@ ghdl -r --std=08 --workdir=build tb_regUnit \
   --stop-time=1us
 ```
 
-The generated `wave.vcd` file can be opened with **Surfer** or Vivado to inspect internal signals and verify correct behavior.
+The generated `wave.vcd` file can be opened with **Surfer** to verify signal timing and functional correctness.
 
 ---
 
@@ -53,13 +61,13 @@ The generated `wave.vcd` file can be opened with **Surfer** or Vivado to inspect
 
 ![Result](images/result.jpg)
 
-The output clearly highlights the **edges of the bug**, demonstrating that the Sobel filter correctly detects image borders.
+The resulting image clearly shows the detected **edges of the bug**, confirming the correct behavior of the Sobel filter implementation.
 
 ---
 
-## Project Repository
+## Repository
 
-The full source code and project files are available on GitHub:
+The complete project is available on GitHub:
 
 👉 https://github.com/Kihax/sobel
 
